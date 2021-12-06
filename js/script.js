@@ -34,13 +34,15 @@ for (let i = 0; i < 5; i++) {
     let title = document.getElementById("content");
     title.innerHTML += (numbers[i]) + "  " ;
 
+    
 }
 
 console.log(numbers);
 
+
 //li faccio sparire 
 
-setTimeout (hideNumbers, 4000);
+setTimeout (hideNumbers, 1000);
 
 function hideNumbers () {
     title.classList.add("display_none");
@@ -51,15 +53,48 @@ function hideNumbers () {
 
 //chiedo all'utente di inserire 5 numeri
 
-setTimeout (promptFunction, 6000);
+setTimeout (promptFunction, 3000);
 
 function promptFunction() {
+
 for (i = 0; i < 5; i++) {
+
     let userNumber = parseInt(prompt ("Quali erano i numeri?"));
 
     userNumbers.push(userNumber);
-    console.log("Numeri scelti dall'utente " + userNumbers);    
+    console.log("Numero scelto dall'utente " + userNumbers);  
+    
+    
 }
+
+console.log(userNumbers + " numeri scelti");
+
+//confronto i numeri 
+
+
+
+if (JSON.stringify(numbers) === JSON.stringify(userNumbers)) {
+
+    let title = document.getElementById("content");
+    title.innerHTML += " Complimenti, hai vinto!";
+    title.classList.remove("display_none");
+    
+    console.log("Hai vinto");
+    
+} else {
+
+    let title = document.getElementById("content");
+    title.innerHTML += " Peccato, hai perso ☹";
+    title.classList.remove("display_none");
+    console.log("Hai perso");
+
 }
-console.log(userNumbers);
+
+
+}
+
+
+
+
+
 
