@@ -42,7 +42,7 @@ console.log(numbers);
 
 //li faccio sparire 
 
-setTimeout (hideNumbers, 1000);
+setTimeout (hideNumbers, 4000);
 
 function hideNumbers () {
     title.classList.add("display_none");
@@ -53,7 +53,7 @@ function hideNumbers () {
 
 //chiedo all'utente di inserire 5 numeri
 
-setTimeout (promptFunction, 3000);
+setTimeout (promptFunction, 30000);
 
 function promptFunction() {
 
